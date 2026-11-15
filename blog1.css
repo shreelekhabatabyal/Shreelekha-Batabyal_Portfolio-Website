@@ -1,0 +1,50 @@
+/* Article page: an editorial reading layout within the existing site identity */
+.article-page { --essay-reading-width: 720px; }
+.article-site-header { grid-template-columns: 1fr auto 1fr; }
+.article-site-header .header-edition { justify-self:end; }
+.essay { padding-top: 7.5rem; }
+.essay-intro { width:min(1240px,calc(100% - 2 * var(--page-pad))); margin:0 auto; padding:clamp(2.2rem,4vw,3.8rem) 0 2.5rem; }
+.essay-back { display:inline-block; margin-bottom:clamp(2.2rem,4vw,3.5rem); color:var(--muted); font-size:.76rem; transition:color .2s ease; }
+.essay-back:hover { color:var(--blue); }
+.essay-heading-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(240px,.65fr); gap:clamp(2.5rem,7vw,7rem); align-items:end; }
+.essay-heading-main h1 { max-width:850px; margin:0; font:400 clamp(3.6rem,6.3vw,6.5rem)/.94 var(--serif); letter-spacing:-.052em; text-wrap:balance; }
+.essay-byline { display:flex; align-items:center; gap:.75rem; margin-top:1.7rem; color:var(--muted); font-size:.68rem; letter-spacing:.025em; }
+.byline-separator { width:4px; height:4px; border-radius:50%; background:var(--blue); }
+.essay-deck-wrap { padding:0 0 .3rem 1.35rem; border-left:1px solid var(--blue); }
+.essay-deck { max-width:390px; margin:0; color:#4d5358; font:clamp(1.35rem,2vw,1.85rem)/1.28 var(--serif); }
+.deck-rule { display:block; width:2.2rem; height:1px; margin-top:1.4rem; background:var(--blue); }
+.essay-cover { position:relative; width:min(1440px,calc(100% - 2 * var(--page-pad))); height:clamp(300px,43vw,590px); margin:1rem auto 0; overflow:hidden; background:#e6e9e2; }
+.essay-cover img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+.essay-cover.is-empty { display:grid; place-items:center; background:linear-gradient(115deg,#e6e9e2 0%,#dce3dc 48%,#e9e9df 100%); }
+.essay-cover.is-empty::before { content:"Your image will appear here"; color:#69746f; font:italic clamp(1.2rem,2vw,1.65rem) var(--serif); }
+.essay-reading-grid { display:grid; grid-template-columns:minmax(0,var(--essay-reading-width)); justify-content:center; width:min(1180px,calc(100% - 2 * var(--page-pad))); margin:0 auto; padding:clamp(3.5rem,6vw,5.5rem) 0 clamp(4rem,7vw,6rem); }
+.essay-content { min-width:0; }
+.essay-prose p { margin:0 0 1.65rem; color:#30343a; font-size:1.02rem; line-height:1.92; }
+.essay-prose p:first-child::first-letter { float:left; padding:.08em .12em 0 0; color:var(--blue); font:4.3rem/.78 var(--serif); }
+.essay-prose strong { color:#172b3d; font-weight:600; }
+.essay-ending { display:flex; justify-content:center; gap:.45rem; padding-top:1.2rem; }
+.essay-ending span { width:5px; height:5px; border-radius:50%; background:var(--blue); opacity:.65; }
+.essay-return { padding:clamp(3.5rem,6vw,5rem) var(--page-pad); background:var(--paper-alt); }
+.essay-return-inner { width:min(1000px,100%); margin:0 auto; display:grid; grid-template-columns:.7fr 1.3fr auto; gap:2rem; align-items:center; }
+.return-label { margin:0; color:var(--muted); font-size:.6rem; letter-spacing:.13em; }
+.essay-return-inner>p:nth-child(2) { margin:0; font:clamp(1.5rem,2.4vw,2.2rem)/1.2 var(--serif); }
+.essay-return-inner a { width:max-content; padding-bottom:.3rem; border-bottom:1px solid var(--line); font-size:.72rem; transition:color .2s,border-color .2s; }
+.essay-return-inner a:hover { color:var(--blue); border-color:var(--blue); }
+@media(max-width:900px) {
+  .essay-heading-grid { grid-template-columns:1fr; gap:1.5rem; }
+  .essay-heading-main h1 { max-width:900px; }
+  .essay-deck-wrap { max-width:580px; }
+  .essay-return-inner { grid-template-columns:1fr; gap:1rem; }
+}
+@media(max-width:720px) {
+  .essay { padding-top:6.6rem; }
+  .essay-intro { padding-top:1.8rem; padding-bottom:1.7rem; }
+  .essay-back { margin-bottom:2rem; }
+  .essay-heading-main h1 { font-size:clamp(3.25rem,12.5vw,5rem); line-height:.98; }
+  .essay-category { font-size:.58rem; }
+  .essay-deck { font-size:1.35rem; }
+  .essay-cover { width:calc(100% - 2 * var(--page-pad)); height:clamp(230px,65vw,390px); margin-top:.5rem; }
+  .essay-reading-grid { padding-top:2.5rem; }
+  .essay-prose p { font-size:.97rem; line-height:1.85; margin-bottom:1.35rem; }
+  .essay-prose p:first-child::first-letter { font-size:3.7rem; }
+}

@@ -1,0 +1,45 @@
+.writing-page{--writing-blue:#315a7d}
+.page-shell{width:min(88rem,calc(100% - 2 * var(--page-pad)));margin-inline:auto}
+.writing-hero{padding-top:8.5rem;padding-bottom:2.5rem}
+.writing-hero-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:1.15rem;border-bottom:1px solid var(--line)}
+.writing-hero .eyebrow{display:flex;align-items:center;gap:.7rem;margin:0}
+.eyebrow-rule{width:2rem;height:1px;background:var(--blue)}
+.intro-side-note{margin:0;color:var(--blue);font:italic 1rem var(--serif)}
+.writing-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,8vw,8rem);align-items:end;padding:clamp(3rem,6vw,5rem) 0}
+.writing-hero h1{margin:1rem 0 0;font:400 clamp(5rem,9vw,8.5rem)/.88 var(--serif);letter-spacing:-.06em}
+.writing-hero h1 em{color:var(--blue);font-weight:400}
+.writing-hero-copy{max-width:34rem;padding-bottom:.35rem}
+.writing-lead{margin:0 0 .9rem;font:clamp(1.45rem,2.1vw,2rem)/1.25 var(--serif)}
+.writing-hero-copy p:last-child{margin:0;color:#555a5e;font-size:.88rem;line-height:1.8}
+.writing-categories-intro{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+.writing-archive{padding-top:clamp(3.5rem,7vw,6rem);padding-bottom:clamp(4rem,8vw,7rem)}
+.archive-heading{display:grid;grid-template-columns:1fr minmax(18rem,27rem);gap:2rem;align-items:end;margin-bottom:2rem}
+.archive-heading h2{margin:1rem 0 0;font:400 clamp(2.8rem,4.5vw,4.4rem)/1 var(--serif);letter-spacing:-.035em}
+.archive-heading h2 span{color:var(--blue)}
+.archive-heading>p{max-width:26rem;margin:0 0 .3rem;color:var(--muted);font-size:.83rem;line-height:1.75}
+.writing-filters{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem;padding:.8rem 0 1rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.filter-label{margin-right:.6rem;color:var(--muted);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
+.writing-filter{padding:.48rem .85rem;border:1px solid transparent;border-radius:2rem;background:transparent;color:var(--ink);font-size:.72rem;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.writing-filter:hover{border-color:var(--line);color:var(--blue)}
+.writing-filter.is-active{background:var(--ink);color:var(--paper)}
+.writing-collection{padding-top:1rem}.writing-shelf{display:grid;grid-template-columns:.72fr 1.28fr;gap:clamp(2rem,7vw,7rem);padding:2rem 0;border-bottom:1px solid var(--line)}.writing-shelf[hidden]{display:none}
+
+.shelf-label {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem;
+}
+
+.shelf-label > span {
+  display: block;
+  padding-top: .2rem;
+  color: var(--blue);
+  font: italic 1.15rem var(--serif);
+  text-align: left;
+}
+
+.shelf-label h3{margin:0 0 .4rem;font:1.7rem/1.05 var(--serif)}
+.shelf-label p{margin:0;color:var(--muted);font-size:.72rem;line-height:1.6}.shelf-content{display:grid;grid-template-columns:minmax(0,1fr) 12rem;gap:2rem;align-items:end}.writing-placeholder{min-height:14rem;padding:1.5rem;display:flex;flex-direction:column;align-items:flex-start;background:#eeede7}.writing-placeholder-blue{background:#e4eaf0}.writing-placeholder-sage{background:#e8ece5}.entry-status{color:#66717a;font-size:.58rem;letter-spacing:.12em}.writing-placeholder h4{margin:auto 0 .65rem;font:2.1rem/1 var(--serif);letter-spacing:-.02em}.writing-placeholder p{max-width:28rem;margin:0;color:#596064;font-size:.78rem;line-height:1.7}.entry-meta{margin-top:1.1rem;color:#7b8284;font-size:.56rem;letter-spacing:.11em}.shelf-note{max-width:12rem;margin:0 0 .2rem;color:var(--muted);font:italic 1.05rem/1.35 var(--serif)}.writing-note-band{padding:clamp(3rem,6vw,5rem) 0;background:#efeee8}.writing-note-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:3rem;align-items:start}.writing-note-layout>p:last-child{max-width:55rem;margin:0;font:clamp(1.45rem,2.4vw,2.3rem)/1.25 var(--serif)}
+@media(max-width:900px){.writing-shelf{grid-template-columns:1fr;gap:1.3rem}.shelf-content{grid-template-columns:minmax(0,1fr) 10rem;gap:1.3rem}}
+@media(max-width:720px){.writing-hero{padding-top:7.5rem}.writing-hero-grid{grid-template-columns:1fr;gap:1.5rem;padding:2.8rem 0}.writing-hero h1{font-size:clamp(4.5rem,15vw,6.5rem)}.writing-categories-intro{flex-direction:column;gap:.5rem}.archive-heading{grid-template-columns:1fr;gap:.8rem}.archive-heading h2{font-size:3.3rem}.writing-shelf{padding:1.6rem 0}.shelf-content{grid-template-columns:1fr}.shelf-note{max-width:24rem}.writing-placeholder{min-height:13rem}.writing-note-layout{grid-template-columns:1fr;gap:1rem}}
